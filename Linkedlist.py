@@ -5,45 +5,44 @@ class ListNode:
 
 class LinkedList:
 
-   def __init__(self):
+ def __init__(self):
        self.head = None
 
  def getSize(self):
-        temp = self.head
-        count = 0
-        while temp.next is not None:
-          temp = temp.next
-          count = count + 1
-        print(str(count))
-
-
-def print(self):
- temp = self.head
-       while temp is not None:
-           print(str(temp.data))
-           temp = temp.next
-
-
-def nodeAt(self,idx):
-      temp=self.head
-          ab=None
+     temp = self.head
      count = 0
-    
+     while temp.next is not None:
+       temp = temp.next
+       count = count + 1
+       print(str(count))
+
+
+ def printNode(self):
+    temp = self.head
+    while temp is not None:
+      print(str(temp.data))
+      temp = temp.next
+
+
+ def nodeAt(self,idx):
+      temp=self.head
+      ab=None
+      count = 0
       if (count==idx):
-      ab=temp.data    
-      count=count+1
+       ab=temp.data    
+       count=count+1
     
-def insert(self,idx,data):
+ def insert(self,idx,data):
    newNode = ListNode(data)
-            if(idx==0):
+   if(idx==0):
     newNode.next=self.head;
     self.head=newNode;
-        else: 
-          prev=nodeAt(self,idx-1)
-        newNode.next=prev.next
-         prev.next=newNode
+   else: 
+    prev=nodeAt(self,idx-1)
+    newNode.next=prev.next
+    prev.next=newNode
 
-def remove(self,val):
+ def remove(self,val):
       temp = self.head
       prev = self.head
       while temp is not None:
@@ -56,8 +55,8 @@ def remove(self,val):
           temp = temp.next
           prev.next = temp
        else:
-         prev = temp
-         temp = temp.next
+          prev = temp
+          temp = temp.next
 
 
 
@@ -91,7 +90,7 @@ while val>0:
     val+=1
 
  elif(number == 2):
-  myList.print()
+  myList.printNode()
 
  elif(number == 3):
   myList.getSize()
