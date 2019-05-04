@@ -1,3 +1,5 @@
+
+
 class ListNode:
    def __init__(self, data, next=None):
 		self.data = data
@@ -24,23 +26,16 @@ class LinkedList:
       temp = temp.next
 
 
- def nodeAt(self,idx):
-      temp=self.head
-      ab=None
-      count = 0
-      if (count==idx):
-       ab=temp.data    
-       count=count+1
-    
- def insert(self,idx,data):
-   newNode = ListNode(data)
-   if(idx==0):
-    newNode.next=self.head;
-    self.head=newNode;
-   else: 
-    prev=nodeAt(self,idx-1)
-    newNode.next=prev.next
-    prev.next=newNode
+ 
+ def insert(self,data):
+  newNode = ListNode(data)
+        if self.head is None:
+            self.head = newNode
+        else: 
+           temp = self.head
+           while temp.next is not None:
+             temp = temp.next
+           temp.next = newNode
 
  def remove(self,val):
       temp = self.head
@@ -78,7 +73,11 @@ while val>0:
   }
 
   return switcher.get(arg,"invalid argument")
+
+ number = switch(val_1)
+
  number = switch(value_1)
+
  if(number == 1):
   print("Enter the total number of numbers you want to add")
   total_number = input()
@@ -101,9 +100,6 @@ while val>0:
   myList.remove(val)
 
            
-
-
-
 
 
 
