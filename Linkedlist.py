@@ -2,21 +2,21 @@
 
 class ListNode:
    def __init__(self, data, next=None):
-		self.data = data
-		self.next = next
+    self.data = data
+    self.next = next
 
 class LinkedList:
 
  def __init__(self):
-       self.head = None
+     self.head = None
 
  def getSize(self):
      temp = self.head
-     count = 0
+     count = 1
      while temp.next is not None:
        temp = temp.next
        count = count + 1
-       print(str(count))
+     print(str(count))
 
 
  def printNode(self):
@@ -28,7 +28,7 @@ class LinkedList:
 
  
  def insert(self,data):
-  newNode = ListNode(data)
+        newNode = ListNode(data)
         if self.head is None:
             self.head = newNode
         else: 
@@ -59,8 +59,8 @@ myList = LinkedList()
 val = 1
 val_2 = 1;
 while val>0:
- print("Press the number regarding what you want to do!\n 1 for adding the element\n 2 for printing the list\n 3 for getting the link size \n 4 for deleting the following node")
- val_1 = input()
+ print("Press the number regarding what you want to do!\n 1 for adding the element\n 2 for printing the list\n 3 for getting the link size \n 4 for deleting the following node\n")
+ val_1 = int(input())
 	
 # Switch case in python.	
  def switch(arg) :
@@ -75,17 +75,14 @@ while val>0:
   return switcher.get(arg,"invalid argument")
 
  number = switch(val_1)
-
- number = switch(value_1)
-
  if(number == 1):
   print("Enter the total number of numbers you want to add")
-  total_number = input()
+  total_number = int(input())
   for x in range(0,total_number):
     string = str(x+1) 
-    print "Enter the {} number".format(string)
+    print ("Enter the {} number".format(string))
     number = input()
-    myList.insert(2,number) 
+    myList.insert(number) 
     val+=1
 
  elif(number == 2):
@@ -97,7 +94,7 @@ while val>0:
  elif(number == 4):
   print("Enter the number you want to delete")
   value = input()
-  myList.remove(val)
+  myList.remove(value)
 
            
 
